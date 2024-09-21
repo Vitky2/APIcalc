@@ -3,7 +3,6 @@ pipeline {
     
     environment {
         DOCKER_CREDENTIALS_ID = 'DOCKER_HUB' 
-        VERSION = "${env.BUILD_NUMBER}" // Используем номер сборки как версию
     }
     
     stages {
@@ -14,8 +13,8 @@ pipeline {
 
                 echo 'building'
                 sh 'docker build -t vitky2/calcapi:latest .'
-		sh 'export x=$(cat version.txt)'
-		sh 'echo $((x+1)) |tee version.txt'            
+		sh 'export x=$(cat /home/kali/dz/version.txt)'
+		sh 'echo $((x+1)) | tee /home/kali/dz/version.txt'            
 		}
        }
         

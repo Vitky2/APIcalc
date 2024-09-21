@@ -15,9 +15,9 @@ pipeline {
                 echo 'building'
                 sh 'docker build -t vitky2/calcapi:latest .'
 		sh 'export x=$(cat version.txt)'
-		sh 'echo $((x+1)) > version.txt'            
+		sh 'echo $((x+1)) |tee version.txt'            
 		}
-        }
+       }
         
     }
 

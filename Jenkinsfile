@@ -14,9 +14,9 @@ pipeline {
                 echo 'building'
 		sh 'whoami'
                 sh 'docker build -t vitky2/calcapi:latest .'
-		sh 'export x=$(cat /home/kali/dz/version.txt)'
-		sh 'echo $((x+1)) > /home/kali/dz/version.txt'            
-		}
+		sh 'ls -la'
+		sh './udpate.sh'	
+	    }
        }
         
     }

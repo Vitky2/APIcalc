@@ -14,7 +14,7 @@ pipeline {
                 echo 'building'
 		sh 'whoami'
                 sh 'docker build -t vitky2/calcapi:latest .'
-		sh 'ls -la'
+		sh 'ls -la /home/kali/dz'
 		sh './update.sh'	
 	    }
        }

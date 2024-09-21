@@ -23,7 +23,7 @@ pipeline {
 
     post {
         success {
-            echo 'Docker image built and pushed successfully!'
+            echo 'Docker image built and pushed successfully!!'
         }
         failure {
             echo 'Something went wrong with the build.'

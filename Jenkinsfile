@@ -15,7 +15,7 @@ pipeline {
 		sh 'whoami'
                 sh 'docker build -t vitky2/calcapi:latest .'
 		sh 'ls -la'
-		sh './udpate.sh'	
+		sh './update.sh'	
 	    }
        }
         

@@ -29,7 +29,7 @@ pipeline {
 		
 		sh 'sleep 60'
 		sh 'docker ps'
-		sh 'docker exec -it apicalc:latest bandit -r . -lll'
+		sh 'docker run --rm apicalc:latest bandit -r . -lll'
 	
 	    }
 	}

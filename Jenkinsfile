@@ -27,8 +27,9 @@ pipeline {
 		
 	    steps {
 		
-		sh 'sleep 20'
-		sh 'docker exec -it apicalc bandit -r . -lll'
+		sh 'sleep 60'
+		sh 'docker ps'
+		sh 'docker exec -it apicalc:latest bandit -r . -lll'
 	
 	    }
 	}

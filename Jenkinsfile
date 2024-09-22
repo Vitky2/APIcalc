@@ -39,6 +39,12 @@ pipeline {
 	    }	
 	}
 
+	stage('safety') {
+	    steps {
+		sh 'docker run --rm apicalc:latest safety check --full-report'
+	    }
+	}
+
         
     }
 

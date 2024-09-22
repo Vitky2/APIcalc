@@ -10,6 +10,8 @@ RUN pip install --no-cache-dir bandit
 
 RUN pip install --no-cache-dir semgrep
 
+RUN pip install --no-cache-dir safety
+
 COPY . .
 
 CMD ["python3", "app.py"]

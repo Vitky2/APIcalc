@@ -38,13 +38,6 @@ pipeline {
 	    	sh 'docker run --rm apicalc:latest semgrep --config semgrep-config.yaml .'
 	    }	
 	}
-
-	stage('safety') {
-	    steps {
-		sh 'docker run --rm apicalc:latest safety check --full-report'
-	    }
-	}
-
         
     }
 

@@ -27,12 +27,18 @@ pipeline {
 		
 	    steps {
 		
-		sh 'sleep 60'
-		sh 'docker ps'
+		sh 'sleep 20'
 		sh 'docker run --rm apicalc:latest bandit -r . -lll'
 	
 	    }
 	}
+
+	stage('semgrep') {
+	    steps {
+	    	sh 'docker run --rm apicalc:latest semgrep --config semgrep-config.yaml .'
+	    }	
+	}
+
         
     }
 

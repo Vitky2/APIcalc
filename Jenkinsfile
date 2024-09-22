@@ -22,6 +22,15 @@ pipeline {
 
             }
         }
+
+	stage('bandit') {
+		
+	    steps {
+		
+		sh 'docker exec -it apicalc:latest bandit -r . -lll'
+	
+	    }
+	}
         
     }
 

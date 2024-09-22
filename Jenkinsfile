@@ -1,23 +1,27 @@
 pipeline {
     agent any
     
-    environment {
-        DOCKER_CREDENTIALS_ID = 'DOCKER_HUB' 
-    }
-    
-    stages {
-        
-        stage('build') {
+    stages {        
+
+	stage('test') {
 
             steps {
 
+                echo 'testing'
+                sh 'docker stop $(docker ps -q --filter ancestor=apicalc)' 
+                
+            }
+        }
+
+	stage('build') {
+            steps {
+
                 echo 'building'
-		sh 'whoami'
-                sh 'docker build -t vitky2/calcapi:latest .'
-		sh 'ls -la /home'
-		sh './update.sh'	
-	    }
-       }
+                sh 'docker build -t apicalc:latest .'
+                sh 'docker run --rm -d -p 8001:8001 apicalc'
+
+            }
+        }
         
     }
 

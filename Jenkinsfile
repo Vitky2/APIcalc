@@ -27,7 +27,7 @@ pipeline {
 		
 	    steps {
 		
-		sh 'docker exec -it apicalc:latest bandit -r . -lll'
+		sh 'docker exec -it apicalc bandit -r . -lll'
 	
 	    }
 	}

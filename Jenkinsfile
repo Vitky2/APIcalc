@@ -18,7 +18,7 @@ pipeline {
 
                 echo 'building'
                 sh 'docker build -t apicalc:latest .'
-                sh 'docker run --rm -d -p 8001:8001 apicalc'
+                sh 'docker run -d -p 8001:8001 apicalc'
 
             }
         }

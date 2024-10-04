@@ -6,9 +6,9 @@
 
 ## trivy scan 1
 
-[[png/trivy_scan1.png]]
+![trivy_scan1](png/trivy_scan1.png)
 
 
 ## trivy scan 2
 
-[[png/trivy_scan2.png]]
+![trivy_scan2](png/trivy_scan2.png)

@@ -18,6 +18,7 @@ pipeline {
 
                 echo 'building'
                 sh 'docker build -t apicalc:latest .'
+                sh 'trivy image --severity HIGH apicalc:latest'
                 sh 'docker run -d -p 8001:8001 apicalc'
 
             }

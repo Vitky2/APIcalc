@@ -10,7 +10,7 @@
 
 ## Semgerp scan
 
-![semgrep](png/image1.png)
+![semgrep](png/img1.png)
 
 ## trivy scan 1
 
